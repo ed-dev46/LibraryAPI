@@ -547,4 +547,6 @@ obj/
 
 *.sqlite
 *.sqlite-wal
-*.sqlite-shm
+*.sqlite-s
+
+*.http
