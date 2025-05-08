@@ -66,7 +66,7 @@ namespace LibraryAPI.Controllers
             {
                 return NotFound();
             }
-            return NoContent();
+            return Ok($"deleted: {result}");
         }
     }
 }

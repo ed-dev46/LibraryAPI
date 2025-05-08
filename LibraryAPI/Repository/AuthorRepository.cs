@@ -43,6 +43,7 @@ namespace LibraryAPI.Repository
         {
             if (_context.Authors.Any(x => x.Id == id))
             {
+                author.Id = id;
                 _context.Authors.Update(author);
                 await _context.SaveChangesAsync();
                 return await _context.Authors.FirstOrDefaultAsync(x => x.Id == id);

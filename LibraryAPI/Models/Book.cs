@@ -10,9 +10,9 @@ namespace LibraryAPI.Models
         [Key]
         public int Id { get; set; }
         [Required, MinLength(1), MaxLength(50)]
-        public string Title { get; set; }
+        public required string Title { get; set; }
         [Required, MinLength(1), MaxLength(50)]
-        public string Genre { get; set; }
+        public required string Genre { get; set; }
         [Required, DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{MM/dd/yyyy}")]
         public DateOnly PublicationDate { get; set; }
         [ForeignKey("Author"), Column("Author")]

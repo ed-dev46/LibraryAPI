@@ -8,11 +8,11 @@ namespace LibraryAPI.Models
         [Key]
         public int Id { get; set; }
         [Required, MinLength(1), MaxLength(50)]
-        public string Name { get; set; }
+        public required string Name { get; set; }
         [Required, DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{MM/dd/yyyy}")]
         public DateOnly DateOfBirth { get; set; }
         [Required, MinLength(1), MaxLength(50)]
-        public string Nationality { get; set; }
+        public required string Nationality { get; set; }
         [JsonIgnore]
         public List<Book> Books { get; set; } = new List<Book>();
     }
