@@ -15,8 +15,10 @@ builder.Services.AddDbContext<LibraryContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("LibraryDb")));
 
 builder.Services.AddScoped<IAuthorService, AuthorService>();
+builder.Services.AddScoped<IBookService, BookService>();
 
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
+builder.Services.AddScoped<IBookRepository, BookRepository>();
 
 var app = builder.Build();
 

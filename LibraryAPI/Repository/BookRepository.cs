@@ -32,7 +32,7 @@ namespace LibraryAPI.Repository
 
         public async Task<Book> AddBookAsync(Book book)
         {
-            _context.Books.Add(book);
+            await _context.Books.AddAsync(book);
             await _context.SaveChangesAsync();
             return book;
         }
