@@ -1,0 +1,8 @@
+﻿[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startupCommand = "LibraryAPI.dll"
+restartPolicy = "always"
+healthcheckPath = "/health"
